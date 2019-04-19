@@ -3,7 +3,7 @@
     
     if(isset($_SESSION['id'])){
        
-				echo " yes";
+				echo " Logged in";
     }
     else{
         header("Location:index.php?error=pleaselogin");

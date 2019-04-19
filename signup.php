@@ -12,6 +12,11 @@
 							echo '<p>Fill in all fields!</p>';
 						}
 					}
+					 elseif (isset($_GET['signup'])) {
+						if($_GET['signup'] == "success"){
+							echo '<p>Signup Successful!</p>';
+						}
+					 }
 				?>
 				<form action="includes/signup.inc.php" method="post">
 					<input type="text" name="sid" placeholder="student id"><br><br>
