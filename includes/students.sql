@@ -1,4 +1,4 @@
-
+/*create db name as ucam*/ 
 CREATE TABLE students (
   id int(11) PRIMARY KEY NOT NULL,
   sid tinytext NOT NULL,
