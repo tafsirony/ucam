@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+header{
+	background-color: cyan;
+	padding: 10px 0px;
+}
+.wrapper{
+	width: 80%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.wrapper-form{
+	width: 65%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.logo{
+	width: 10%;
+	float: left;
+}
+.logo img{
+	width: 100%;
+}
+.menu{
+	margin-top: 25px;
+	width: 70%;
+	float: right;
+	padding: 10px 0px;
+}
+.menu ul{
+	float: right;
+}
+.menu ul li{
+	border: 1px solid red;
+	list-style: none;
+	float: left;
+}
+.menu ul li a{
+	text-decoration: none;
+	padding: 5px 15px;
+	display: block;
+	color:white;
+}
+
+.menu ul li a:hover{
+	color: red;
+	transition: 0.5s;
+}
+/*login*/
+.login-form{
+	position: absolute;
+	border: 2px solid red;
+	padding: 80px 40px ;
+	margin: 100px ;
+}
+.login-form h1{
+	border: 1px solid red;
+	text-align: center;
+	margin-bottom: 60px;
+}
+.login-form input{
+	width: 350px;
+	height: 30px;
+}
+.login-form button{
+	width: 350px;
+	height: 30px;	
+}
+.login-form p{
+	padding: 10px;
+	text-align: center;
+}
+/*signup*/
+.signup-form{
+	position: absolute;
+	border: 2px solid red;
+	padding: 80px 40px ;
+	margin: 100px ;
+}
+.signup-form h1{
+	border: 1px solid red;
+	text-align: center;
+	margin-bottom: 60px;
+}
+.signup-form input{
+	width: 350px;
+	height: 30px;
+}
+
+.signup-form button{
+	width: 350px;
+	height: 30px;	
+}
+.signup-form p{
+	padding: 10px;
+	text-align: center;
+}
+
+.dept-gender input{
+	width: 40%;
+
+}
+.dept-gender select{
+	
+	width: 50%;
+	height: 30px;
+	float: right;
+}
