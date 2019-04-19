@@ -13,7 +13,7 @@ if (empty($userid) || empty($name)|| empty($dept) || empty($email) || empty($pas
 	header("Location: ../signup.php?error=emptyfield&sid=".$userid."&name=".$name."&dept=".$dept."&email=".$email);
 	exit();
 }
-elseif (!filter_var($email,FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $userid)) {
+elseif (!filter_var($email,FILTER_VALIDATE_EMAIL) && !preg_match("/^[0-9]*$/", $userid)) {
 	header("Location: ../signup.php?error=invalidemailid");
 	exit();
 }
@@ -21,7 +21,7 @@ elseif (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
 	header("Location: ../signup.php?error=invalidemail&sid=".$userid);
 	exit();
 }
-elseif (!preg_match("/^[a-zA-Z0-9]*$/",$userid)) {
+elseif (!preg_match("/^[0-9]*$/",$userid)) {
 	header("Location: ../signup.php?error=invaliduserid&email=".$email);
 	exit();
 }
@@ -55,7 +55,7 @@ else{
 			else{
 				$hashedpass= password_hash($pass,PASSWORD_DEFAULT);
 
-				mysqli_stmt_bind_param($stmt,"sssss",$userid,$name,$dept,$email,$hashedpass);
+				mysqli_stmt_bind_param($stmt,"ssssss",$userid,$name,$dept,$gender,$email,$hashedpass);
 				mysqli_stmt_execute($stmt);
 				mysqli_stmt_store_result($stmt);
 				header("Location: ../signup.php?signup=success");
