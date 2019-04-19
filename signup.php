@@ -6,6 +6,13 @@
 
  			<div class="signup-form" >
 				<h1>Signup</h1>
+				<?php
+					if(isset($_GET['error'])){
+						if($_GET['error'] == "emptyfield"){
+							echo '<p>Fill in all fields!</p>';
+						}
+					}
+				?>
 				<form action="includes/signup.inc.php" method="post">
 					<input type="text" name="sid" placeholder="student id"><br><br>
 					<input type="text" name="sname" placeholder="full name"><br><br>

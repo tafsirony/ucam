@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,21 +10,38 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	
 	<header >
+	
 		<nav class="wrapper">
 			<div class="logo">
 				<a href="#">
-					<img src="img/logo.jpg" alt="logo">
+					<img src="img/13914318.jpg" alt="logo">
 				</a>
 			</div>
-			<div class="menu">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">About me</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>
+			<?php 
+				if(isset($_SESSION['id'])){
+					echo '<div class="menu">
+					<ul>
+						<li><a href="dashboard.php">Dashboard</a></li>
+						<li><a href="enroll.php">Enroll New Courses</a></li>
+						<li><a href="history.php">History</a></li>
+						<form action="includes/logout.inc.php">
+					<button type="submit" name="logout-submit">Logout</button>
+					</form>
+					</ul>
+				</div>';
+				}
+				else{
+					echo '<div class="menu">
+					<ul>
+						<p> Course Registration System</p>
+						
+					</ul>
+				</div>';
+				}
+			?>
+			
 			
 		</nav>
 	</header>

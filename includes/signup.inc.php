@@ -46,7 +46,7 @@ else{
 		exit();
 		}
 		else{
-			$sql = "INSERT INTO students(sid,sname,dept,email,pwd) VALUES(?,?,?,?,?)";
+			$sql = "INSERT INTO students(sid,sname,dept,gender,email,pwd) VALUES(?,?,?,?,?,?)";
 			$stmt = mysqli_stmt_init($conn);
 			if (!mysqli_stmt_prepare($stmt,$sql)) {
 				header("Location: ../signup.php?error=sqlerror2");
